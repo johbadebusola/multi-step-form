@@ -1,0 +1,34 @@
+.box1 {
+  width: 100%;
+  height: 170px;
+  background-image: url("../images/sidebar-mobile.svg");
+  background-size: contain;
+}
+
+.container {
+  background-color: hsl(229, 24%, 93%);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+}
+
+.footer > .button2 {
+  width: 100px;
+  padding: 15px;
+  border-radius: 7px;
+  margin-right: 1em;
+  border: none;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+}
