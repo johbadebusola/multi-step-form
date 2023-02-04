@@ -1,0 +1,78 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+.select-plan-container{
+    background-color: white;
+    margin: 1.7em;
+    padding: 1.5em;
+    border-radius: 15px;
+    position: absolute;
+    top: 4.5em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.select-plan-container > h2{
+color: hsl(213, 96%, 18%);
+
+}
+
+.select-plan-container > p{
+    color: hsl(231, 11%, 63%);
+    margin-top: -0.6em;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.select-plan-container > input {
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 1em;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 5px;
+    
+}
+
+.select-plan-container > input::placeholder{
+   padding-left: 1em;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   color: hsl(231, 11%, 63%);
+}
+
+.select-plan-container > input:hover{
+    border: 1px solid  hsl(243, 100%, 62%);
+}
+
+.select-plan-container > label {
+    color: hsl(213, 96%, 18%);
+    font-size: 13px;
+   
+    
+}
+
+.select-plan-container > .phoneNo {
+    color: hsl(213, 96%, 18%);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.5em;
+    margin-bottom: -2.4em;
+}
+
+.styles{
+ 
+   border: 1px solid hsl(354, 84%, 57%) !important;
+
+}
+
+.error{
+    color:hsl(354, 84%, 57%);
+    font-weight: bold;
+}
+
+.errorclear{
+    display: none;
+}
