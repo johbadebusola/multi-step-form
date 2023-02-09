@@ -32,3 +32,30 @@
   background-color: hsl(213, 96%, 18%);
   color: white;
 }
+
+.formStep {
+  display: flex;
+  width: 180px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.formStep > div {
+  border: 1px solid white;
+  width: 70px;
+  height: 30px;
+  margin-left: 10px;
+  color: white;
+  font-weight: bold;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  border-radius: 50%;
+}
+
+.completed{
+  background-color: hsl(206, 94%, 87%);
+  color: black !important;
+}
