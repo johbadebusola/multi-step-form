@@ -15,13 +15,15 @@
 
 .pickAddon > h2 {
   color: hsl(213, 96%, 18%);
+  margin-top: 0em;
+ 
 }
 
 .pickAddon > p {
   color: hsl(231, 11%, 63%);
   margin-top: -0.6em;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .pickAddon > .box{
@@ -64,4 +66,9 @@
 
   .boxx{
     margin-left: -3.8em !important;
+  }
+
+  .toggle-select{
+border: 1px solid  hsl(243, 100%, 62%)  !important;
+
   }

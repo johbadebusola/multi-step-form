@@ -1,0 +1,46 @@
+.Finishing-container {
+  background-color: white;
+  margin: 1.7em;
+  padding: 1.5em;
+  border-radius: 15px;
+  position: absolute;
+  top: 4.5em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.Finishing-container > h2 {
+  color: hsl(213, 96%, 18%);
+  margin-top: 0em;
+}
+
+.Finishing-container > p {
+  color: hsl(231, 11%, 63%);
+  margin-top: -0.6em;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.Finishing-container > .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.Finishing-container > .box > div > .p1{
+    color: hsl(213, 96%, 18%);
+    font-size: 13px;
+    font-weight: bold;
+}
+.Finishing-container > .box > div > .p2{
+    color: hsl(231, 11%, 63%);
+    margin-top: -0.7em;
+    font-size: 13px;
+}
+
+.Finishing-container > .box > .p3{
+    color: hsl(213, 96%, 18%);
+    font-size: 13px;
+    font-weight: bold;
+    
+}

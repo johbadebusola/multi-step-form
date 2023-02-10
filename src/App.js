@@ -5,6 +5,7 @@ import PersonalInfo from "./assets/components/PersonalInfo"
 import SelectPlan from "./assets/components/SelectPlan"
 import "./assets/css/sidebar.css"
 import PickAddon from "./assets/components/PickAddon"
+import FinishingUp from './assets/components/FinishingUp';
 
 
 function App() {
@@ -18,13 +19,15 @@ function App() {
 
   const [active, setActive] = useState(false)
   const [toggle, setToggle] = useState(false)
-  const [billing,setBilling] = useState(0)
-
-console.log(toggle)
+  const [billing, setBilling] = useState(0)
+  const [onlineService, setOnlineService] = useState(false)
+  const [largerStorage, setLargerStorage] = useState(false)
+  const [customisable, setCustomisable] = useState(false)
+  console.log(toggle)
 
   const [component] = useState(
     [
-      <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />, <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} />, <PickAddon />
+      <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />, <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} />, <PickAddon />,<FinishingUp/>
     ]
   )
 
@@ -35,17 +38,20 @@ console.log(toggle)
       return <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />
     }
     else if (num === 2) {
-      return <SelectPlan toggle={toggle} setToggle={setToggle}  billing={billing} setBilling={setBilling}  />
+      return <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} />
     }
-    else {
-      return <PickAddon toggle={toggle}/>
+    else if(num ===3){
+      return <PickAddon toggle={toggle} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} customisable={customisable} setLargerStorage={setLargerStorage} setCustomisable={setCustomisable}  />
+    }
+    else{
+     return   <FinishingUp  num={num} setnum={setNum} billing={billing}/>
     }
   }
   const [num, setNum] = useState(1)
 
 
 
-// for next button
+  // for next button
   const next = (e) => {
     if (num === component.length) {
       return
@@ -63,7 +69,7 @@ console.log(toggle)
     setNum(num + 1)
   }
 
-// for previous button
+  // for previous button
   const prev = () => {
     setNum(num - 1)
     setFormValue({ ...formValue, username: "kfkfk" })
@@ -76,7 +82,7 @@ console.log(toggle)
     <div className='container' >
       <div className='box1' >
         {/* <pre> {JSON.stringify(formValue,undefined,2)}</pre> */}
-           {/* <pre> {JSON.stringify(billing,undefined,2)}</pre> */}
+        {/* <pre> {JSON.stringify(billing,undefined,2)}</pre> */}
         <div className='formStep' >
           <div className={num >= 1 ? "completed" : ""} > 1 </div>
           <div className={num >= 2 ? "completed" : ""}> 2 </div>
@@ -90,7 +96,8 @@ console.log(toggle)
         <div>
           {PageToggle()}
           {/* <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} /> */}
-          {/* <PickAddon  toggle={toggle}  /> */}
+          {/* <PickAddon toggle={toggle} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} customisable={customisable} setLargerStorage={setLargerStorage} setCustomisable={setCustomisable} /> */}
+          {/* <FinishingUp  num={num} setnum={setNum} billing={billing}/> */}
         </div>
         <footer className='footer'>
           <button onClick={prev} className='button1' disabled={num === 1}> Go Back   </button>
