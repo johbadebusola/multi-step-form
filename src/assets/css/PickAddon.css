@@ -1,0 +1,67 @@
+.pickAddon {
+  background-color: white;
+  margin: 1.7em;
+  padding: 1.5em;
+  border-radius: 15px;
+  position: absolute;
+  top: 4.5em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.pickAddon > .box:hover{
+    border: 1px solid  hsl(243, 100%, 62%);
+
+}
+
+.pickAddon > h2 {
+  color: hsl(213, 96%, 18%);
+}
+
+.pickAddon > p {
+  color: hsl(231, 11%, 63%);
+  margin-top: -0.6em;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.pickAddon > .box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(231, 11%, 63%);
+  margin-bottom: 1em;
+  border-radius: 7px;
+  padding: 0em 0.7em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.pickAddon > .box > div{
+    margin-left: -2.1em;
+}
+
+.pickAddon > .box > div > .div{
+    margin-left: -3.1em;
+    display: none;
+}
+
+.pickAddon > .box > div > .p1{
+    color: hsl(213, 96%, 18%);
+    font-weight:bold;
+    font-size: 13px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.pickAddon > .box > div > .p2{
+    margin-top: -1em;
+    color: hsl(231, 11%, 63%);
+    font-size: 11px;
+}
+
+.pickAddon > .box > .p3{
+    color: hsl(213, 96%, 18%);
+    font-size: 11px;
+  }
+
+  .boxx{
+    margin-left: -3.8em !important;
+  }

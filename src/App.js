@@ -18,10 +18,13 @@ function App() {
 
   const [active, setActive] = useState(false)
   const [toggle, setToggle] = useState(false)
+  const [billing,setBilling] = useState(0)
+
+console.log(toggle)
 
   const [component] = useState(
     [
-      <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />, <SelectPlan toggle={toggle} setToggle={setToggle} />, <PickAddon />
+      <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />, <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} />, <PickAddon />
     ]
   )
 
@@ -32,10 +35,10 @@ function App() {
       return <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />
     }
     else if (num === 2) {
-      return <SelectPlan toggle={toggle} setToggle={setToggle}  />
+      return <SelectPlan toggle={toggle} setToggle={setToggle}  billing={billing} setBilling={setBilling}  />
     }
     else {
-      return <PickAddon />
+      return <PickAddon toggle={toggle}/>
     }
   }
   const [num, setNum] = useState(1)
@@ -67,12 +70,13 @@ function App() {
 
   }
 
-  console.log(active)
+
 
   return (
     <div className='container' >
       <div className='box1' >
         {/* <pre> {JSON.stringify(formValue,undefined,2)}</pre> */}
+           {/* <pre> {JSON.stringify(billing,undefined,2)}</pre> */}
         <div className='formStep' >
           <div className={num >= 1 ? "completed" : ""} > 1 </div>
           <div className={num >= 2 ? "completed" : ""}> 2 </div>
@@ -85,7 +89,8 @@ function App() {
 
         <div>
           {PageToggle()}
-          {/* <SelectPlan toggle={toggle} setToggle={setToggle} /> */}
+          {/* <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} /> */}
+          {/* <PickAddon  toggle={toggle}  /> */}
         </div>
         <footer className='footer'>
           <button onClick={prev} className='button1' disabled={num === 1}> Go Back   </button>
