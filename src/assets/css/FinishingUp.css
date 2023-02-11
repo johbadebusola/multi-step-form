@@ -44,3 +44,46 @@
     font-weight: bold;
     
 }
+
+hr{
+  margin-top: -0.2em;
+  border: 0.1px solid ;
+  color: hsl(231, 32%, 92%);
+  margin-left: 1em;
+  
+}
+
+.double-check{
+  margin-left: 1.3em;
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+}
+
+.double-check-cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -0.5em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.double-check-cont > p{
+  font-size: 13px;
+  color: hsl(213, 96%, 18%);
+
+}
+
+.double-check-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.double-check-total > p{
+  font-size: 13px;
+  font-weight: bold;
+  color: hsl(243, 100%, 62%);
+
+}

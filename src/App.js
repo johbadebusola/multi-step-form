@@ -23,7 +23,13 @@ function App() {
   const [onlineService, setOnlineService] = useState(false)
   const [largerStorage, setLargerStorage] = useState(false)
   const [customisable, setCustomisable] = useState(false)
-  console.log(toggle)
+  const [onlineServiceBilling,setOnlineServiceBilling] = useState(0)
+  const [largerStorageBilling,setLargerStorageBilling] = useState(0)
+  const [customisableBilling,setCustomisableBilling] = useState(0)
+  const [totalBilling, setTotalBilling] = useState(0)
+  
+
+  // console.log(billing)
 
   const [component] = useState(
     [
@@ -38,13 +44,13 @@ function App() {
       return <PersonalInfo formValue={formValue} setFormValue={setFormValue} active={active} setActive={setActive} />
     }
     else if (num === 2) {
-      return <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} />
+      return <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling}   />
     }
     else if(num ===3){
-      return <PickAddon toggle={toggle} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} customisable={customisable} setLargerStorage={setLargerStorage} setCustomisable={setCustomisable}  />
+      return <PickAddon toggle={toggle} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} customisable={customisable} setLargerStorage={setLargerStorage} setCustomisable={setCustomisable} setCustomisableBilling={setCustomisableBilling} setOnlineServiceBilling={setOnlineServiceBilling} setLargerStorageBilling={setLargerStorageBilling}   />
     }
     else{
-     return   <FinishingUp  num={num} setnum={setNum} billing={billing}/>
+     return      <FinishingUp  num={num} setnum={setNum} billing={billing} toggle={toggle} onlineService={onlineService} largerStorage={largerStorage} customisable={customisable} onlineServiceBilling={onlineServiceBilling} largerStorageBilling={largerStorageBilling} customisableBilling={customisableBilling} totalBilling={totalBilling} setTotalBilling={setTotalBilling}  />
     }
   }
   const [num, setNum] = useState(1)
@@ -84,9 +90,9 @@ function App() {
         {/* <pre> {JSON.stringify(formValue,undefined,2)}</pre> */}
         {/* <pre> {JSON.stringify(billing,undefined,2)}</pre> */}
         <div className='formStep' >
-          <div className={num >= 1 ? "completed" : ""} > 1 </div>
-          <div className={num >= 2 ? "completed" : ""}> 2 </div>
-          <div className={num >= 3 ? "completed" : ""}> 3 </div>
+          <div className={num ===1 ? "completed" : ""} > 1 </div>
+          <div className={num === 2 ? "completed" : ""}> 2 </div>
+          <div className={num === 3 ? "completed" : ""}> 3 </div>
           <div className={num === 4 ? "completed" : ""} > 4 </div>
         </div>
       </div>
@@ -97,7 +103,7 @@ function App() {
           {PageToggle()}
           {/* <SelectPlan toggle={toggle} setToggle={setToggle} billing={billing} setBilling={setBilling} /> */}
           {/* <PickAddon toggle={toggle} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} customisable={customisable} setLargerStorage={setLargerStorage} setCustomisable={setCustomisable} /> */}
-          {/* <FinishingUp  num={num} setnum={setNum} billing={billing}/> */}
+          {/* <FinishingUp  num={num} setnum={setNum} billing={billing} toggle={toggle} onlineService={onlineService} largerStorage={largerStorage} customisable={customisable} onlineServiceBilling={onlineServiceBilling} largerStorageBilling={largerStorageBilling} customisableBilling={customisableBilling} totalBilling={totalBilling}  /> */}
         </div>
         <footer className='footer'>
           <button onClick={prev} className='button1' disabled={num === 1}> Go Back   </button>

@@ -4,12 +4,16 @@ import "../css/selectPlan.css"
 import arcade from "../images/arcade.svg"
 import advance from "../images/advance.svg"
 import pro from "../images/pro.svg"
-const SelectPlan = ({ toggle, setToggle, billing, setBilling }) => {
+const SelectPlan = (
+  { 
+    toggle, 
+    setToggle,
+     billing, 
+     setBilling 
+    }) => {
   const togg = (e) => {
     setToggle(!toggle)
   }
-  console.log(toggle)
-
 
   return (
     <div className='select-plan-container'>
@@ -35,7 +39,7 @@ const MonthlyPlan = ({ billing, setBilling }) => {
       <h2> Select your plan</h2>
       <p> You have the option of monthly or yearly billing.</p>
 
-      <div className='box' onClick={() => setBilling("$9/mo")}  >
+      <div className='box' onClick={() => setBilling(9)}  >
         <img src={arcade} alt="arcade" />
         <div>
           <p className='p1'>Arcade</p>
@@ -44,7 +48,7 @@ const MonthlyPlan = ({ billing, setBilling }) => {
 
       </div>
 
-      <div className='box' onClick={() => setBilling("$12/mo")}>
+      <div className='box' onClick={() => setBilling(12)}>
         <img src={advance} alt="advance" />
         <div>
           <p className='p1'>Advanced</p>
@@ -52,7 +56,7 @@ const MonthlyPlan = ({ billing, setBilling }) => {
         </div>
       </div>
 
-      <div className='box' onClick={() => setBilling("$15/mo")}>
+      <div className='box' onClick={() => setBilling(15)}>
         <img src={pro} alt="pro" />
         <div>
           <p className='p1'>Pro</p>
@@ -71,7 +75,7 @@ const YearlyPlan = ({ billing, setBilling }) => {
       <h2> Select your plan</h2>
       <p> You have the option of monthly or yearly billing.</p>
 
-      <div className='box' onClick={() => setBilling("$90/yr")}>
+      <div className='box' onClick={() => setBilling(90)}>
         <img src={arcade} alt="arcade" />
         <div>
           <p className='p1'>Arcade</p>
@@ -81,7 +85,7 @@ const YearlyPlan = ({ billing, setBilling }) => {
 
       </div>
 
-      <div className='box' onClick={() => setBilling("$120/yr")}>
+      <div className='box' onClick={() => setBilling(120)}>
         <img src={advance} alt="advance" />
         <div>
           <p className='p1'>Advanced</p>
@@ -90,7 +94,7 @@ const YearlyPlan = ({ billing, setBilling }) => {
         </div>
       </div>
 
-      <div className='box' onClick={() => setBilling("$150/yr")}>
+      <div className='box' onClick={() => setBilling(150)}>
         <img src={pro} alt="pro" />
         <div>
           <p className='p1'>Pro</p>
